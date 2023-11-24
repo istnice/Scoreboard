@@ -1,3 +1,4 @@
 export function onRequest(context) {
-  return new Response("Hello, world!")
+    let value = await env.kv.put("test", "one");
+    return new Response("Hello, world!")
 }
